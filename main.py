@@ -6,7 +6,7 @@ import time
 TOKEN = "8766852110:AAEVE4T-hWXO_QWAhuHe3nJO1H7Xk8F2a2c"
 CHAT_ID = "7496717018"
 
-symbols = ["THYAO.IS", "ASELS.IS",CLEBI.IS","AKBNK.IS","MIATK.IS","BRYAT.IS","YEOTK.IS","KONTR.IS","ASTOR.IS"]
+symbols = ["THYAO.IS", "ASELS.IS"]
 
 last_signal = {}
 
