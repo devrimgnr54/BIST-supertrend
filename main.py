@@ -6,7 +6,14 @@ import time
 TOKEN = "8766852110:AAEVE4T-hWXO_QWAhuHe3nJO1H7Xk8F2a2c"
 CHAT_ID = "7496717018"
 
-symbols = ["THYAO.IS", "ASELS.IS"]
+symbols = [
+"AKBNK.IS","ALARK.IS","ARCLK.IS","ASELS.IS","ASTOR.IS","BIMAS.IS",
+"EKGYO.IS","ENKAI.IS","EREGL.IS","FROTO.IS","GARAN.IS","GUBRF.IS",
+"HEKTS.IS","ISCTR.IS","KCHOL.IS","KONTR.IS","KOZAA.IS","KOZAL.IS",
+"KRDMD.IS","MGROS.IS","ODAS.IS","OYAKC.IS","PETKM.IS","SAHOL.IS",
+"SASA.IS","SISE.IS","TCELL.IS","THYAO.IS","TOASO.IS","TUPRS.IS",
+"VESTL.IS","YKBNK.IS"
+]
 
 last_signal = {}
 
@@ -14,9 +21,7 @@ def send(msg):
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 requests.post(url, data={"chat_id": CHAT_ID, "text": msg})
 
-
-
-
+send("Bot çalıştı ve tarama başladı")
 
 while True:
 for symbol in symbols:
@@ -51,6 +56,6 @@ send(f"SELL - {name}\nEMA50 altında\n15dk SuperTrend SAT verdi")
 last_signal[symbol] = "SELL"
 
 except Exception as e:
-print(symbol, e)
+send(f"HATA {symbol}: {e}")
 
 time.sleep(300)
